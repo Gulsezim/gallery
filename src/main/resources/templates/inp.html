@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>GALLERY</title>
+    <link rel="stylesheet" th:href = "@{/css/shkola.css}" />
 </head>
 <body>
-<form action="/demo/add" method="GET" modelAttribute="author">
-    First Name <input type="text" id="firstnamee" name="firstname"><br>
-    Last Name<input type="text" id="lastnamee" name="lastname"><br>
-    Email <input type="text" id="emaile" name="email"><br>
+<div class="dropdown">
+    <button class="dropbtn">ЯЗЫК</button>
+    <div class="dropdown-content">
+        <a>Русский</a>
+        <a>Қазақша</a>
+        <a>English</a>
+    </div>
+</div>
+<div class="f"><p>ИНТЕРНЕТ-МАГАЗИН КАРТИН</p></div>
 
+<div id="mainmenu">
+    <ul>
+        <li><a class="active" href="raspisanie.html">КАРТИНЫ</a></li>
+        <li><a href="kursy.html" >ХУДОЖНИКИ</a></li>
+        <li><a href="otzyvy.html">УСЛОВИЯ ДОСТАВКИ</a></li>
+        <li><a href="otzyvy.html">О НАС</a></li>
+        <li><a class="active" href="moikinopark.html">КОНТАКТЫ </a></li>
+
+    </ul>
+</div>
+<br>
+<br>
+<div class="f"><p>РЕГИСТРАЦИЯ</p></div>
+
+<form action="/demo/add" method="GET" modelAttribute="author">
+    ИМЯ<input type="text" id="firstnamee" name="firstname"><br>
+    ПОЧТА<input type="text" id="emaile" name="email"><br>
     <input type="submit" value="ok">
 
 </form>
