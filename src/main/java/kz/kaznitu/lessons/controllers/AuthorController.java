@@ -24,9 +24,9 @@ public class AuthorController {
 
     @GetMapping("/add")
     public @ResponseBody String addAuthor(@RequestParam("firstname") String firstName,
-                                          @RequestParam("lastname") String lastName,
-                                          @RequestParam("email") String email){
-        Author author = new Author(firstName, lastName, email) ;
+                                          @RequestParam("email") String email,
+                                          @RequestParam("kartina") String kartina){
+        Author author = new Author(firstName, email, kartina) ;
         authorRepository.save(author);
         return "saved" ;
     }
